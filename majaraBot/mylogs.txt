@@ -1,0 +1,549 @@
+2017-08-22 01:17:53,761 - telegram.ext.dispatcher - A TelegramError was raised while processing the Update.
+2017-08-22 01:17:53,761 - root - Bad Request
+2017-08-22 01:18:01,181 - telegram.ext.dispatcher - A TelegramError was raised while processing the Update.
+2017-08-22 01:18:01,181 - root - Bad Request
+2017-08-22 01:18:30,837 - telegram.ext.dispatcher - A TelegramError was raised while processing the Update.
+2017-08-22 01:18:30,837 - root - Bad Request
+2017-08-22 01:18:38,051 - telegram.ext.dispatcher - A TelegramError was raised while processing the Update.
+2017-08-22 01:18:38,051 - root - Bad Request
+2017-08-22 01:19:30,646 - telegram.ext.dispatcher - A TelegramError was raised while processing the Update.
+2017-08-22 01:19:30,658 - root - Bad Request
+2017-08-22 01:19:45,808 - telegram.ext.updater - Error while getting Updates: urllib3 HTTPError ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2017-08-22 01:19:45,811 - telegram.ext.updater - unhandled exception
+Traceback (most recent call last):
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Python3\lib\http\client.py", line 1331, in getresponse
+    response.begin()
+  File "C:\Python3\lib\http\client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "C:\Python3\lib\http\client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Python3\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Python3\lib\ssl.py", line 1002, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Python3\lib\ssl.py", line 865, in read
+    return self._sslobj.read(len, buffer)
+  File "C:\Python3\lib\ssl.py", line 625, in read
+    v = self._sslobj.read(len, buffer)
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\new program\armin_1\telegram\utils\request.py", line 167, in _request_wrapper
+    resp = _get_con_pool().request(*args, **kwargs)
+  File "C:\Python3\lib\site-packages\urllib3\request.py", line 70, in request
+    **urlopen_kw)
+  File "C:\Python3\lib\site-packages\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\Python3\lib\site-packages\urllib3\poolmanager.py", line 321, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Python3\lib\site-packages\urllib3\util\retry.py", line 357, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\Python3\lib\site-packages\urllib3\packages\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Python3\lib\http\client.py", line 1331, in getresponse
+    response.begin()
+  File "C:\Python3\lib\http\client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "C:\Python3\lib\http\client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Python3\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Python3\lib\ssl.py", line 1002, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Python3\lib\ssl.py", line 865, in read
+    return self._sslobj.read(len, buffer)
+  File "C:\Python3\lib\ssl.py", line 625, in read
+    v = self._sslobj.read(len, buffer)
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\new program\armin_1\telegram\ext\updater.py", line 104, in _thread_wrapper
+    target(*args, **kwargs)
+  File "C:\new program\armin_1\telegram\ext\dispatcher.py", line 171, in start
+    self.process_update(update)
+  File "C:\new program\armin_1\telegram\ext\dispatcher.py", line 196, in process_update
+    self.dispatch_error(None, update)
+  File "C:\new program\armin_1\telegram\ext\dispatcher.py", line 307, in dispatch_error
+    callback(self.bot, update, error)
+  File "C:/new program/armin_1/majaraBot/firstBot.py", line 16, in callback_errorhandler
+    raise error
+  File "C:\new program\armin_1\telegram\ext\updater.py", line 221, in _start_polling
+    network_delay=network_delay)
+  File "C:\new program\armin_1\telegram\bot.py", line 121, in decorator
+    result = func(self, *args, **kwargs)
+  File "C:\new program\armin_1\telegram\bot.py", line 1220, in getUpdates
+    result = request.post(url, data, timeout=urlopen_timeout)
+  File "C:\new program\armin_1\telegram\utils\request.py", line 242, in post
+    **urlopen_kwargs)
+  File "C:\new program\armin_1\telegram\utils\request.py", line 173, in _request_wrapper
+    raise NetworkError('urllib3 HTTPError {0}'.format(error))
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', ConnectionResetError(10054, 'An existing connection was forcibly closed by the remote host', None, 10054, None))
+2017-08-22 01:19:46,811 - urllib3.connectionpool - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E444420208>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:19:46,814 - urllib3.connectionpool - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E444433CF8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:19:46,816 - urllib3.connectionpool - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E4444D4400>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:19:46,819 - telegram.ext.updater - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E4444D4470>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+2017-08-22 01:19:48,322 - urllib3.connectionpool - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E4444D45F8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:19:48,333 - urllib3.connectionpool - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E4444D47B8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:19:48,336 - urllib3.connectionpool - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E444412F28>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:19:48,338 - telegram.ext.updater - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E444420240>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+2017-08-22 01:19:50,590 - urllib3.connectionpool - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E444433DD8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:19:50,590 - urllib3.connectionpool - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E444433C88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:19:50,590 - urllib3.connectionpool - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E4444D4588>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:19:50,591 - telegram.ext.updater - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E4444D4828>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+2017-08-22 01:19:53,968 - urllib3.connectionpool - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E4444D49B0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:19:53,968 - urllib3.connectionpool - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E4444D4B70>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:19:53,969 - urllib3.connectionpool - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E4444D4B00>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:19:53,969 - telegram.ext.updater - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E4444D4BE0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+2017-08-22 01:19:59,034 - urllib3.connectionpool - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E4444D4940>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:19:59,034 - urllib3.connectionpool - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E4444D4F60>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:19:59,035 - urllib3.connectionpool - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E4444D4F98>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:19:59,035 - telegram.ext.updater - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E444548048>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+2017-08-22 01:20:06,632 - urllib3.connectionpool - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E4445483C8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:20:06,633 - urllib3.connectionpool - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E444548518>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:20:06,635 - urllib3.connectionpool - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E4445484A8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:20:06,637 - telegram.ext.updater - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E444548588>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+2017-08-22 01:20:18,029 - urllib3.connectionpool - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E444548128>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:20:18,030 - urllib3.connectionpool - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E444548A90>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:20:18,032 - urllib3.connectionpool - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E444548A20>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:20:18,033 - telegram.ext.updater - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E444548B00>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+2017-08-22 01:20:35,121 - urllib3.connectionpool - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E4445486A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:20:35,122 - urllib3.connectionpool - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E444548F98>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:20:35,124 - urllib3.connectionpool - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44455A048>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:20:35,125 - telegram.ext.updater - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44455A0B8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+2017-08-22 01:21:00,757 - urllib3.connectionpool - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44455A470>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:21:00,759 - urllib3.connectionpool - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44455A5C0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:21:00,760 - urllib3.connectionpool - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44455A550>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:21:00,762 - telegram.ext.updater - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44455A630>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+2017-08-22 01:21:39,211 - urllib3.connectionpool - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44455A1D0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:21:39,214 - urllib3.connectionpool - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44455AB38>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:21:39,216 - urllib3.connectionpool - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44455AAC8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:21:39,219 - telegram.ext.updater - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44455ABA8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+2017-08-22 01:22:09,222 - urllib3.connectionpool - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44455A748>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:22:09,224 - urllib3.connectionpool - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44456A0F0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:22:09,226 - urllib3.connectionpool - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44456A080>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:22:09,228 - telegram.ext.updater - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44456A160>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+2017-08-22 01:22:39,230 - urllib3.connectionpool - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44456A518>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:22:39,232 - urllib3.connectionpool - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44456A668>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:22:39,234 - urllib3.connectionpool - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44456A5F8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:22:39,236 - telegram.ext.updater - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44456A6D8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+2017-08-22 01:23:09,237 - urllib3.connectionpool - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44456A278>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:23:09,238 - urllib3.connectionpool - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44456ABE0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:23:09,239 - urllib3.connectionpool - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44456AB70>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:23:09,240 - telegram.ext.updater - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44456AC50>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+2017-08-22 01:23:39,242 - urllib3.connectionpool - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44456A7F0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:23:39,242 - urllib3.connectionpool - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44457A198>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:23:39,243 - urllib3.connectionpool - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44457A128>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:23:39,243 - telegram.ext.updater - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44457A208>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+2017-08-22 01:24:09,246 - urllib3.connectionpool - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44457A048>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:24:09,247 - urllib3.connectionpool - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44457A710>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:24:09,249 - urllib3.connectionpool - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44457A6A0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 01:24:09,251 - telegram.ext.updater - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44457A780>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+2017-08-22 08:58:17,625 - urllib3.connectionpool - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44457A320>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 08:58:17,627 - urllib3.connectionpool - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44457AC88>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 08:58:17,628 - urllib3.connectionpool - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44457AC18>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 08:58:17,629 - telegram.ext.updater - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44457ACF8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+2017-08-22 08:59:24,289 - telegram.ext.updater - Error while getting Updates: Timed out
+2017-08-22 08:59:27,826 - telegram.ext.updater - Error while getting Updates: Conflict: terminated by other long poll or webhook (409)
+2017-08-22 09:00:05,221 - telegram.ext.updater - Error while getting Updates: Timed out
+2017-08-22 09:00:06,225 - urllib3.connectionpool - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44458C668>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 09:00:06,229 - urllib3.connectionpool - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44458CBE0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 09:00:06,229 - urllib3.connectionpool - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44458C908>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 09:00:06,233 - telegram.ext.updater - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44458C860>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+2017-08-22 09:00:07,739 - urllib3.connectionpool - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44458C470>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 09:00:07,743 - urllib3.connectionpool - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44458CFD0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 09:00:07,743 - urllib3.connectionpool - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44459D048>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 09:00:07,747 - telegram.ext.updater - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44459D0B8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+2017-08-22 09:00:09,999 - urllib3.connectionpool - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44459D438>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 09:00:10,003 - urllib3.connectionpool - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44459D588>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 09:00:10,003 - urllib3.connectionpool - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44459D518>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 09:00:10,007 - telegram.ext.updater - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44459D5F8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+2017-08-22 09:00:13,382 - urllib3.connectionpool - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44459D198>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 09:00:13,382 - urllib3.connectionpool - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44459DB00>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 09:00:13,382 - urllib3.connectionpool - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44459DA90>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 09:00:13,382 - telegram.ext.updater - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44459DB70>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+2017-08-22 09:00:18,450 - urllib3.connectionpool - Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E44459D710>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 09:00:18,452 - urllib3.connectionpool - Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E444DB00B8>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 09:00:18,453 - urllib3.connectionpool - Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E444DB0080>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',)': /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates
+2017-08-22 09:00:18,454 - telegram.ext.updater - Error while getting Updates: urllib3 HTTPError HTTPSConnectionPool(host='api.telegram.org', port=443): Max retries exceeded with url: /bot449150567:AAHxy2L0LY66BQAuX-GSWkNt05-AtvEsufM/getUpdates (Caused by NewConnectionError('<urllib3.connection.VerifiedHTTPSConnection object at 0x000001E444DB0128>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed',))
+2017-08-22 09:01:19,864 - telegram.ext.updater - Error while getting Updates: Timed out
+2017-08-22 09:02:17,708 - telegram.ext.updater - Error while getting Updates: Timed out
+2017-08-22 09:02:39,242 - telegram.ext.updater - error in bootstrap phase; try=0 max_retries=0
+Traceback (most recent call last):
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Python3\lib\http\client.py", line 1331, in getresponse
+    response.begin()
+  File "C:\Python3\lib\http\client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "C:\Python3\lib\http\client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Python3\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Python3\lib\ssl.py", line 1002, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Python3\lib\ssl.py", line 865, in read
+    return self._sslobj.read(len, buffer)
+  File "C:\Python3\lib\ssl.py", line 625, in read
+    v = self._sslobj.read(len, buffer)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\new program\armin_1\telegram\utils\request.py", line 167, in _request_wrapper
+    resp = _get_con_pool().request(*args, **kwargs)
+  File "C:\Python3\lib\site-packages\urllib3\request.py", line 70, in request
+    **urlopen_kw)
+  File "C:\Python3\lib\site-packages\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\Python3\lib\site-packages\urllib3\poolmanager.py", line 321, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Python3\lib\site-packages\urllib3\util\retry.py", line 357, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\Python3\lib\site-packages\urllib3\packages\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Python3\lib\http\client.py", line 1331, in getresponse
+    response.begin()
+  File "C:\Python3\lib\http\client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "C:\Python3\lib\http\client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Python3\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Python3\lib\ssl.py", line 1002, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Python3\lib\ssl.py", line 865, in read
+    return self._sslobj.read(len, buffer)
+  File "C:\Python3\lib\ssl.py", line 625, in read
+    v = self._sslobj.read(len, buffer)
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\new program\armin_1\telegram\ext\updater.py", line 319, in _bootstrap
+    self.bot.setWebhook(webhook_url=webhook_url, certificate=cert)
+  File "C:\new program\armin_1\telegram\bot.py", line 121, in decorator
+    result = func(self, *args, **kwargs)
+  File "C:\new program\armin_1\telegram\bot.py", line 1263, in setWebhook
+    result = request.post(url, data, timeout=kwargs.get('timeout'))
+  File "C:\new program\armin_1\telegram\utils\request.py", line 242, in post
+    **urlopen_kwargs)
+  File "C:\new program\armin_1\telegram\utils\request.py", line 173, in _request_wrapper
+    raise NetworkError('urllib3 HTTPError {0}'.format(error))
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None))
+2017-08-22 09:02:39,242 - telegram.ext.dispatcher - A TelegramError was raised while processing the Update.
+2017-08-22 09:02:39,439 - telegram.ext.dispatcher - An uncaught error was raised while handling the error
+Traceback (most recent call last):
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Python3\lib\http\client.py", line 1331, in getresponse
+    response.begin()
+  File "C:\Python3\lib\http\client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "C:\Python3\lib\http\client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Python3\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Python3\lib\ssl.py", line 1002, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Python3\lib\ssl.py", line 865, in read
+    return self._sslobj.read(len, buffer)
+  File "C:\Python3\lib\ssl.py", line 625, in read
+    v = self._sslobj.read(len, buffer)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\new program\armin_1\telegram\utils\request.py", line 167, in _request_wrapper
+    resp = _get_con_pool().request(*args, **kwargs)
+  File "C:\Python3\lib\site-packages\urllib3\request.py", line 70, in request
+    **urlopen_kw)
+  File "C:\Python3\lib\site-packages\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\Python3\lib\site-packages\urllib3\poolmanager.py", line 321, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Python3\lib\site-packages\urllib3\util\retry.py", line 357, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\Python3\lib\site-packages\urllib3\packages\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Python3\lib\http\client.py", line 1331, in getresponse
+    response.begin()
+  File "C:\Python3\lib\http\client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "C:\Python3\lib\http\client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Python3\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Python3\lib\ssl.py", line 1002, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Python3\lib\ssl.py", line 865, in read
+    return self._sslobj.read(len, buffer)
+  File "C:\Python3\lib\ssl.py", line 625, in read
+    v = self._sslobj.read(len, buffer)
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\new program\armin_1\telegram\ext\dispatcher.py", line 211, in process_update
+    self.dispatch_error(update, te)
+  File "C:\new program\armin_1\telegram\ext\dispatcher.py", line 307, in dispatch_error
+    callback(self.bot, update, error)
+  File "C:/new program/armin_1/majaraBot/firstBot.py", line 57, in callback_errorhandler
+    raise error
+  File "C:\new program\armin_1\telegram\ext\dispatcher.py", line 203, in process_update
+    handler.handle_update(update, self)
+  File "C:\new program\armin_1\telegram\ext\commandhandler.py", line 86, in handle_update
+    return self.callback(dispatcher.bot, update, **optional_args)
+  File "C:/new program/armin_1/majaraBot/firstBot.py", line 52, in startMethod
+    bot.sendMessage(update.message.chat_id, 'a' * 40960)
+  File "C:\new program\armin_1\telegram\bot.py", line 121, in decorator
+    result = func(self, *args, **kwargs)
+  File "C:\new program\armin_1\telegram\bot.py", line 147, in decorator
+    result = request.post(url, data, timeout=kwargs.get('timeout'))
+  File "C:\new program\armin_1\telegram\utils\request.py", line 242, in post
+    **urlopen_kwargs)
+  File "C:\new program\armin_1\telegram\utils\request.py", line 173, in _request_wrapper
+    raise NetworkError('urllib3 HTTPError {0}'.format(error))
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None))
+2017-08-22 09:02:39,470 - telegram.ext.updater - unhandled exception
+Traceback (most recent call last):
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Python3\lib\http\client.py", line 1331, in getresponse
+    response.begin()
+  File "C:\Python3\lib\http\client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "C:\Python3\lib\http\client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Python3\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Python3\lib\ssl.py", line 1002, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Python3\lib\ssl.py", line 865, in read
+    return self._sslobj.read(len, buffer)
+  File "C:\Python3\lib\ssl.py", line 625, in read
+    v = self._sslobj.read(len, buffer)
+socket.timeout: The read operation timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\new program\armin_1\telegram\utils\request.py", line 167, in _request_wrapper
+    resp = _get_con_pool().request(*args, **kwargs)
+  File "C:\Python3\lib\site-packages\urllib3\request.py", line 70, in request
+    **urlopen_kw)
+  File "C:\Python3\lib\site-packages\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\Python3\lib\site-packages\urllib3\poolmanager.py", line 321, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Python3\lib\site-packages\urllib3\util\retry.py", line 357, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\Python3\lib\site-packages\urllib3\packages\six.py", line 686, in reraise
+    raise value
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 388, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 308, in _raise_timeout
+    raise ReadTimeoutError(self, url, "Read timed out. (read timeout=%s)" % timeout_value)
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='api.telegram.org', port=443): Read timed out. (read timeout=15.0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\new program\armin_1\telegram\ext\updater.py", line 104, in _thread_wrapper
+    target(*args, **kwargs)
+  File "C:\new program\armin_1\telegram\ext\dispatcher.py", line 171, in start
+    self.process_update(update)
+  File "C:\new program\armin_1\telegram\ext\dispatcher.py", line 196, in process_update
+    self.dispatch_error(None, update)
+  File "C:\new program\armin_1\telegram\ext\dispatcher.py", line 307, in dispatch_error
+    callback(self.bot, update, error)
+  File "C:/new program/armin_1/majaraBot/firstBot.py", line 57, in callback_errorhandler
+    raise error
+  File "C:\new program\armin_1\telegram\ext\updater.py", line 221, in _start_polling
+    network_delay=network_delay)
+  File "C:\new program\armin_1\telegram\bot.py", line 121, in decorator
+    result = func(self, *args, **kwargs)
+  File "C:\new program\armin_1\telegram\bot.py", line 1220, in getUpdates
+    result = request.post(url, data, timeout=urlopen_timeout)
+  File "C:\new program\armin_1\telegram\utils\request.py", line 242, in post
+    **urlopen_kwargs)
+  File "C:\new program\armin_1\telegram\utils\request.py", line 169, in _request_wrapper
+    raise TimedOut()
+telegram.error.TimedOut: Timed out
+2017-08-22 09:02:39,439 - telegram.ext.updater - unhandled exception
+Traceback (most recent call last):
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Python3\lib\http\client.py", line 1331, in getresponse
+    response.begin()
+  File "C:\Python3\lib\http\client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "C:\Python3\lib\http\client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Python3\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Python3\lib\ssl.py", line 1002, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Python3\lib\ssl.py", line 865, in read
+    return self._sslobj.read(len, buffer)
+  File "C:\Python3\lib\ssl.py", line 625, in read
+    v = self._sslobj.read(len, buffer)
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\new program\armin_1\telegram\utils\request.py", line 167, in _request_wrapper
+    resp = _get_con_pool().request(*args, **kwargs)
+  File "C:\Python3\lib\site-packages\urllib3\request.py", line 70, in request
+    **urlopen_kw)
+  File "C:\Python3\lib\site-packages\urllib3\request.py", line 148, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+  File "C:\Python3\lib\site-packages\urllib3\poolmanager.py", line 321, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "C:\Python3\lib\site-packages\urllib3\util\retry.py", line 357, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "C:\Python3\lib\site-packages\urllib3\packages\six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "C:\Python3\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    httplib_response = conn.getresponse()
+  File "C:\Python3\lib\http\client.py", line 1331, in getresponse
+    response.begin()
+  File "C:\Python3\lib\http\client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "C:\Python3\lib\http\client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Python3\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Python3\lib\ssl.py", line 1002, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Python3\lib\ssl.py", line 865, in read
+    return self._sslobj.read(len, buffer)
+  File "C:\Python3\lib\ssl.py", line 625, in read
+    v = self._sslobj.read(len, buffer)
+urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\new program\armin_1\telegram\ext\updater.py", line 104, in _thread_wrapper
+    target(*args, **kwargs)
+  File "C:\new program\armin_1\telegram\ext\updater.py", line 215, in _start_polling
+    self._bootstrap(bootstrap_retries, clean=clean, webhook_url='')
+  File "C:\new program\armin_1\telegram\ext\updater.py", line 319, in _bootstrap
+    self.bot.setWebhook(webhook_url=webhook_url, certificate=cert)
+  File "C:\new program\armin_1\telegram\bot.py", line 121, in decorator
+    result = func(self, *args, **kwargs)
+  File "C:\new program\armin_1\telegram\bot.py", line 1263, in setWebhook
+    result = request.post(url, data, timeout=kwargs.get('timeout'))
+  File "C:\new program\armin_1\telegram\utils\request.py", line 242, in post
+    **urlopen_kwargs)
+  File "C:\new program\armin_1\telegram\utils\request.py", line 173, in _request_wrapper
+    raise NetworkError('urllib3 HTTPError {0}'.format(error))
+telegram.error.NetworkError: urllib3 HTTPError ('Connection aborted.', ConnectionAbortedError(10053, 'An established connection was aborted by the software in your host machine', None, 10053, None))
+2017-08-22 09:02:39,708 - telegram.ext.dispatcher - stopping due to exception in another thread
+2017-08-22 09:03:47,211 - telegram.ext.updater - Error while getting Updates: Conflict: terminated by other long poll or webhook (409)
+2017-08-22 09:03:48,349 - telegram.ext.updater - Error while getting Updates: Conflict: terminated by other long poll or webhook (409)
+2017-08-22 09:03:48,349 - telegram.ext.updater - unhandled exception
+Traceback (most recent call last):
+  File "C:\new program\armin_1\telegram\ext\updater.py", line 104, in _thread_wrapper
+    target(*args, **kwargs)
+  File "C:\new program\armin_1\telegram\ext\dispatcher.py", line 171, in start
+    self.process_update(update)
+  File "C:\new program\armin_1\telegram\ext\dispatcher.py", line 196, in process_update
+    self.dispatch_error(None, update)
+  File "C:\new program\armin_1\telegram\ext\dispatcher.py", line 307, in dispatch_error
+    callback(self.bot, update, error)
+  File "C:/new program/armin_1/majaraBot/firstBot.py", line 57, in callback_errorhandler
+    raise error
+  File "C:\new program\armin_1\telegram\ext\updater.py", line 221, in _start_polling
+    network_delay=network_delay)
+  File "C:\new program\armin_1\telegram\bot.py", line 121, in decorator
+    result = func(self, *args, **kwargs)
+  File "C:\new program\armin_1\telegram\bot.py", line 1220, in getUpdates
+    result = request.post(url, data, timeout=urlopen_timeout)
+  File "C:\new program\armin_1\telegram\utils\request.py", line 242, in post
+    **urlopen_kwargs)
+  File "C:\new program\armin_1\telegram\utils\request.py", line 191, in _request_wrapper
+    raise NetworkError('{0} ({1})'.format(message, resp.status))
+telegram.error.NetworkError: Conflict: terminated by other long poll or webhook (409)
+2017-08-22 09:03:49,658 - telegram.ext.updater - Error while getting Updates: Conflict: terminated by other long poll or webhook (409)
+2017-08-22 09:03:52,019 - telegram.ext.updater - Error while getting Updates: Conflict: terminated by other long poll or webhook (409)
+2017-08-22 09:03:53,757 - telegram.ext.updater - Error while getting Updates: Conflict: terminated by other long poll or webhook (409)
+2017-08-22 09:03:56,424 - telegram.ext.updater - Error while getting Updates: Conflict: terminated by other long poll or webhook (409)
+2017-08-22 09:03:58,979 - telegram.ext.updater - Error while getting Updates: Conflict: terminated by other long poll or webhook (409)
+2017-08-22 09:04:02,503 - telegram.ext.updater - Error while getting Updates: Conflict: terminated by other long poll or webhook (409)
+2017-08-22 09:04:06,055 - telegram.ext.updater - Error while getting Updates: Conflict: terminated by other long poll or webhook (409)
+2017-08-22 09:04:11,267 - telegram.ext.updater - Error while getting Updates: Conflict: terminated by other long poll or webhook (409)
+2017-08-22 09:04:16,486 - telegram.ext.updater - Error while getting Updates: Conflict: terminated by other long poll or webhook (409)
+2017-08-22 09:04:24,318 - telegram.ext.updater - Error while getting Updates: Conflict: terminated by other long poll or webhook (409)
